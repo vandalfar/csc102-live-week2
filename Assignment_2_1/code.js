@@ -2,7 +2,16 @@
 function gameOver()
 {
     alert(`You have been knocked unconcious.
-Game Over.`)
+Game Over.`);
+    //refreshes the page to play again
+    window.location.reload();
+}
+//using the backtick (`) allows easier newline creation, leading to no need to escape the code for a newline
+function youWin(){
+    alert(`You win!
+Play Again?`)
+    //refreshes the page to play again
+    window.location.reload();
 }
 function runAlert()
 {
@@ -11,7 +20,9 @@ area. Instead of your sleeping party, you find evidence of a struggle at
 your camp with your party members nowhere to be seen. 
     
     
-Game Over.`)
+Game Over.`);
+    //refreshes the page to start the game again
+    window.location.reload();
 }
 //character variables
 var charArmorClass = 17;

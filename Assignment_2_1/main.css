@@ -1,0 +1,118 @@
+/*Created by Michael Anderson*/
+/*changes the style of the page to be more like an old D&D book*/
+body{
+    background-color: blanchedalmond;
+    color:darkslategray;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    padding: 3px;
+}
+/*centers the text for headers, and changes the color/font of different sizes for readability*/
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:maroon;
+    text-align: center;
+}
+h2{
+    color:maroon;
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+/*add padding to paragraphs and divs to move the text away from the border*/
+p{
+    padding: 5px;
+}
+div{
+    padding: 5px;
+}
+/*center the d&d logo image*/
+#dndLogo{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+}
+/*create a separated look for story text*/
+.storyVoice{
+    font-style: italic;
+    border:1px dotted darkkhaki;
+    padding: 5px;
+    width: auto;
+}
+/*create a separate look for DM text*/
+.dmVoice{
+    color: darkred;
+    padding: 5px;
+    border: 1px dotted darkgoldenrod;
+    width: auto;
+}
+/*center the footer text, change color to blend into background*/
+.footer{
+    display:block;
+    text-align: center;
+    font-size: small;
+    padding: 5px;
+    color: darkkhaki;
+}
+/*change the look of the links in the footer for parity*/
+.footer a{
+    text-transform: uppercase;
+    color: maroon;
+    text-decoration: none;
+    font-weight: 750;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/*include visable color change on hover for second call to action*/
+.footer a:hover{
+    color:peru;
+}
+#encounterBody{
+    display: inline-block;
+    width: 50%;
+    border: 2px dotted burlywood;
+    margin-left:auto;
+    margin-right: auto;
+    padding: 5px;
+}
+/*defines the height of the image, adds padding to be more consistent with the page, and floats the image to the right of the paragraphs*/
+#dndArt1{
+    float:right;
+    height:1000px;
+    width: auto;
+    padding: 5px;
+    margin-right: 100px;
+}
+/*defines a fixed height for the banner at the footer, and floats the image to the right of the page*/
+#dndFooter{
+    height: 60px;
+    width: auto;
+    float: right;
+}
+/*changes the color and italicizes key concepts for d&d*/
+.vocabularyWord{
+    color: green;
+    font-style: italic;
+}
+/*changes the look of the button to be more rounded and a fixed height with a differnet font from the rest of the page*/
+button{
+    background: darkkhaki;
+    color: darkslategray;
+    border-radius: 12px;
+    padding: 5px;
+    text-align: center;
+    height:40px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+
+}
+/*changes the look of the button on hover to be larger and different color as a secondary call to action*/
+button:hover{
+    background: goldenrod;
+    color: darkred;
+    font-weight: bolder;
+    border: 3px darkgoldenrod solid;
+    border-radius: 16px;
+    padding: 6px;
+    height: 45px;
+}

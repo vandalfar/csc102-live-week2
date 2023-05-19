@@ -1,0 +1,84 @@
+<!--Created by Michael Anderson
+used a bang (!) template to generate basic HTML page-->
+<!DOCTYPE html>
+<html lang="en">
+<!--link the code.js and main.css in the head-->    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gnoll Encounter</title>
+    <!--link to CSS-->
+    <link rel="stylesheet" href="main.css">
+    <!--link JavaScript file-->
+    <script src="code.js"></script>
+    <!--favicon image, created from PressKit Image DnD_Ampersand_1c_Red_V1_RGB.png, followed tutorial from w3Schools-->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!--create a header division by id-->
+    <div id="encounterHeader">
+        <img id="dndLogo" src="DnD_Logo2.png" alt="Dungeons & Dragons Logo">
+        <h1>Gnoll Encounter</h1>
+    </div>
+    <!--image from the D&D Press Kit-->
+    <img id="dndArt1" src="DND_Art1.png" alt="A party of adventurers around a campfire">
+    <!--create a changeable body of text by id-->
+    <div id="encounterBody">
+        <p>
+            <!--A small preamble/introduction to the game-->
+            <h2>Preface</h2>
+            This game is an attempt to recreate an encouter with a Goblin in the format of Dungeons and Dragons Fifth Edition (D&D5E).
+            Dungeons and Dragons is as much about storytelling as it is about the odds. The JavaScript program that I've created follows
+            the basic rules of D&D5E, such as assigning you an armor class, hit points, and an attack that deals a randomly determined amount
+            of damage based on dice rolls. Don't worry, though! You don't have to do any of the math and tracking that normally comes with D&D 
+            to play this game. All you have to do is relax, read the story, and roll the dice!
+        </p>
+        <p id="storyPrompt">
+            <!--How to play the game-->
+            <h2>How to Play</h2><br>
+            There will be a small paragraph of story presented with each option.<br><br>
+            <!--using a div with the class of storyVoice-->
+            <span class="storyVoice">Story text will appear like this.</span><br><br>
+            There may also be directions from the Dungeon Master. In a normal Dungeons and Dragons game, the Dungeon Master is another person who
+            controls the direction of the game and the non-playable-characters that you encounter. In this game, the program is the Dungeon Master,
+            and has some predetermined dialogue that you can explore!<br><br>
+            <!--using a span with the class of dmVoice-->
+            <span class="dmVoice">Directions and quotations from the dungeon master will appear like this.</span>
+        </p>
+        <h3>Quick Rule Rundown</h3>
+        <ul>
+            <li>During this short game, you will take turns rolling dice for the opportunity to deal damage to your opponent.</li>
+            <li>Before you begin that, you will have to roll for <span class="vocabularyWord">Initiative</span>, which determines your order in the turns.</li>
+            <li>A higher <span class="vocabularyWord">Initiative</span> means that your turn takes place before your opponent.</li>
+            <li>Attack rolls are made against your opponent's <span class="vocabularyWord">Armor Class</span>, a number that you have to beat in order to roll
+            for damage.</li>
+            <li>The game is over when either you, or your opponent's, <span class="vocabularyWord">Hit Points</span> are reduced to zero.</li>
+        </ul>
+        <div id="dmPrompt">
+            <p class="storyVoice">
+                    You and your party have spent the night in a cave deep in the forest. You've been on the road for a few days, and the closest
+                    town is still a few more days away. You can hear Uther snoring lazily as you stir. The oaf must've fallen asleep on watch duty
+                    again. That's alright, you're awake now, and the camp seems none-the-worse. You get up and go a small ways from the camp for 
+                    your morning constitution. On your way back to the cave, you see a rather large, fuzzy creature wearing armor heading towards you!
+            </p>
+        </div>
+        <p class="dmVoice">
+            You can see the Gnoll in the distance making its way towards your camp. You have the time to catch up to it, and you think you can knock it out
+            before it alerts anything else nearby. What do you do?
+        </p>
+        <div id="gameBoard">
+            <button onclick="playGame()" id="playButton">Roll for Initiative!</button>
+            <button onclick="runAlert()" id="testButton">Alert the Party!</button>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="game.html">Reset the Encounter</a>
+        <p>
+            (c) Michael Anderson 2023<br>
+            <!--image from the D&D FanSite Kit-->
+            <img id="dndFooter" src="DnD_Swath_Prmry_Right_V1_L_RGB.png" alt="Dungeons & Dragons Banner">
+        </p>
+    </div>
+</body>
+</html>

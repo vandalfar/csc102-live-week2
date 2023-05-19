@@ -34,7 +34,7 @@ used a bang (!) template to generate basic HTML page-->
             of damage based on dice rolls. Don't worry, though! You don't have to do any of the math and tracking that normally comes with D&D 
             to play this game. All you have to do is relax, read the story, and roll the dice!
         </p>
-        <p id="storyPrompt">
+        <p id="dmPrompt">
             <!--How to play the game-->
             <h2>How to Play</h2><br>
             There will be a small paragraph of story presented with each option.<br><br>
@@ -49,26 +49,28 @@ used a bang (!) template to generate basic HTML page-->
         <h3>Quick Rule Rundown</h3>
         <ul>
             <li>During this short game, you will take turns rolling dice for the opportunity to deal damage to your opponent.</li>
-            <li>Before you begin that, you will have to roll for <span class="vocabularyWord">Initiative</span>, which determines your order in the turns.</li>
-            <li>A higher <span class="vocabularyWord">Initiative</span> means that your turn takes place before your opponent.</li>
+            <li>For simplicity, we will not worry about <span class="vocabularyWord">Initiative</span> this game.</li>
             <li>Attack rolls are made against your opponent's <span class="vocabularyWord">Armor Class</span>, a number that you have to beat in order to roll
             for damage.</li>
             <li>The game is over when either you, or your opponent's, <span class="vocabularyWord">Hit Points</span> are reduced to zero.</li>
         </ul>
-        <div id="dmPrompt">
-            <p class="storyVoice">
+        <div id="storyPrompt" class="storyVoice">
+            <p>
                     You and your party have spent the night in a cave deep in the forest. You've been on the road for a few days, and the closest
                     town is still a few more days away. You can hear Uther snoring lazily as you stir. The oaf must've fallen asleep on watch duty
                     again. That's alright, you're awake now, and the camp seems none-the-worse. You get up and go a small ways from the camp for 
                     your morning constitution. On your way back to the cave, you see a rather large, fuzzy creature wearing armor heading towards you!
             </p>
         </div>
+        <div id="gameBoard">
+
+        </div>
         <p class="dmVoice">
             You can see the Gnoll in the distance making its way towards your camp. You have the time to catch up to it, and you think you can knock it out
             before it alerts anything else nearby. What do you do?
         </p>
-        <div id="gameBoard">
-            <button onclick="playGame()" id="playButton">Roll for Initiative!</button>
+        <div id=buttonBoard">
+            <button onclick="playGame()" id="playButton">Attack!</button>
             <button onclick="runAlert()" id="testButton">Alert the Party!</button>
         </div>
     </div>

@@ -53,18 +53,18 @@ function playGame(){
         charHitPoints = charHitPoints-gnollDmg
         document.getElementById("dmPrompt").innerHTML = `<span class="dmVoice">The gnoll hits you for ` + gnollDmg + ` points, knocking your health down to ` + charHitPoints + `</span>`
     }
-    else if(gnollAtk < charArmorClass){
+    else{
         document.getElementById("dmPrompt").innerHTML = `<span class="dmVoice">The gnoll missed its attack! You take no damage this round.</span>`
     }
     //if the gnoll's hit points fall to zero or below
-    else if(gnollHitPoints <= 0){
+    if(gnollHitPoints <= 0){
         document.getElementById("gameBoard").innerHTML = `You knocked the gnoll unconcious and successfully alerted your party back at the cave. Your adventure continues elsewhere.`
+        youWin();
     }
     //if the character's hit points fall to zero or below
     else if(charHitPoints <= 0){
-        gameOver()
+        gameOver();
     }
     else{
-        document.getElementById("dmPrompt").innerHTML = `The Game Goes On`
     }
 }

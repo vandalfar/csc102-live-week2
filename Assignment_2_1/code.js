@@ -28,6 +28,7 @@ function playGame(){
     var gnollAtk = Math.ceil(Math.random() *20+2);
     var gnollDmg = Math.ceil(Math.random() *4+2);
     document.getElementById("storyBoard").innerHTML = `The gnoll, a feral, hyena-headed humanoid notices you as you approach. It seems as though it has been caught off guard.`
+    document.getElementById("dmPrompt")
     if(charAtk >= gnollArmorClass){
         gnollHitPoints = gnollHitPoints-charDmg
         document.getElementById("gameBoard").innerHTML = `You hit the gnoll for ` + charDmg + ` points, knocking its total health down to ` + gnollHitPoints
@@ -37,10 +38,10 @@ function playGame(){
     }
     else if(gnollAtk >= charArmorClass){
         charHitPoints = charHitPoints-gnollDmg
-        document.getElementById('dmPrompt').innerHTML = `<span class="dmVoice">The gnoll hits you for ` + gnollDmg + ` points, knocking your health down to ` + charHitPoints + `</span>`
+        document.getElementById("dmPrompt").innerHTML = `<span class="dmVoice">The gnoll hits you for ` + gnollDmg + ` points, knocking your health down to ` + charHitPoints + `</span>`
     }
     else if(gnollAtk < charArmorClass){
-        document.getElementById('dmPrompt').innerHTML = `<span class="dmVoice">The gnoll missed its attack! You take no damage this round.</span>`
+        document.getElementById("dmPrompt").innerHTML = `<span class="dmVoice">The gnoll missed its attack! You take no damage this round.</span>`
     }
     else if(gnollHitPoints <= 0){
         document.getElementById("gameBoard").innerHTML = `You knocked the gnoll unconcious and successfully alerted your party back at the cave. Your adventure continues elsewhere.`

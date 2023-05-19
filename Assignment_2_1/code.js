@@ -45,11 +45,11 @@ function playGame(){
         gnollHitPoints = gnollHitPoints-charDmg
         document.getElementById("gameBoard").innerHTML = `You hit the gnoll for ` + charDmg + ` points, knocking its total health down to ` + gnollHitPoints
     }
-    else if(charAtk < gnollArmorClass){
+    else{
         document.getElementById("gameBoard").innerHTML = `You missed!`
     }
     //gnoll attacks character at same time
-    else if(gnollAtk >= charArmorClass){
+   if(gnollAtk >= charArmorClass){
         charHitPoints = charHitPoints-gnollDmg
         document.getElementById("dmPrompt").innerHTML = `<span class="dmVoice">The gnoll hits you for ` + gnollDmg + ` points, knocking your health down to ` + charHitPoints + `</span>`
     }

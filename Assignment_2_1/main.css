@@ -83,6 +83,13 @@ div{
     padding: 5px;
     margin-right: 100px;
 }
+#dndArt2{
+    float:right;
+    height: 800px;
+    width:auto;
+    padding: 5px;
+    margin-right: 100px;
+}
 /*defines a fixed height for the banner at the footer, and floats the image to the right of the page*/
 #dndFooter{
     height: 60px;

@@ -22,30 +22,38 @@ used a bang (!) template to generate basic HTML page-->
         <h1>Gnoll Encounter</h1>
     </div>
     <!--image from the D&D Press Kit-->
-    <img id="dndArt1" src="DND_Art1.png" alt="A party of adventurers around a campfire">
+    <div id="artBoard">
+        <img id="dndArt1" src="DND_Art1.png" alt="A party of adventurers around a campfire">
+    </div>
     <!--create a changeable body of text by id-->
     <div id="encounterBody">
+        <div id="scoreBoard">
         <p>
             <!--A small preamble/introduction to the game-->
             <h2>Preface</h2>
-            This game is an attempt to recreate an encouter with a Goblin in the format of Dungeons and Dragons Fifth Edition (D&D5E).
+            This game is an attempt to recreate an encouter with a creature in the format of Dungeons and Dragons Fifth Edition (D&D5E).
             Dungeons and Dragons is as much about storytelling as it is about the odds. The JavaScript program that I've created follows
             the basic rules of D&D5E, such as assigning you an armor class, hit points, and an attack that deals a randomly determined amount
             of damage based on dice rolls. Don't worry, though! You don't have to do any of the math and tracking that normally comes with D&D 
             to play this game. All you have to do is relax, read the story, and roll the dice!
         </p>
-        <p id="dmPrompt">
+        </div>
+        <div id="dmPrompt">
+        <p>
             <!--How to play the game-->
             <h2>How to Play</h2><br>
-            There will be a small paragraph of story presented with each option.<br><br>
+            There will be a small bit of of story presented with each option. In this version of the game, the story is to add some flavor and make you wonder what else could 
+            be going on in the world.<br><br>
             <!--using a div with the class of storyVoice-->
             <span class="storyVoice">Story text will appear like this.</span><br><br>
-            There may also be directions from the Dungeon Master. In a normal Dungeons and Dragons game, the Dungeon Master is another person who
+            There will also be directions from the Dungeon Master. In a normal Dungeons and Dragons game, the Dungeon Master is another person who
             controls the direction of the game and the non-playable-characters that you encounter. In this game, the program is the Dungeon Master,
-            and has some predetermined dialogue that you can explore!<br><br>
+            and will tell you if you're hitting or missing your attacks (or if your enemy managed to hit you!) and will tell you through some prompts
+            whether you won or lost, or what has happened in the game.<br><br>
             <!--using a span with the class of dmVoice-->
-            <span class="dmVoice">Directions and quotations from the dungeon master will appear like this.</span>
+            <span class="dmVoice">Quotations from the dungeon master will appear like this.</span>
         </p>
+        </div>
         <div id="gameBoard">
         <h3>Quick Rule Rundown</h3>
         <ul>
@@ -58,18 +66,20 @@ used a bang (!) template to generate basic HTML page-->
         </div>
         <div id="storyBoard" class="storyVoice">
             <p>
-                    You and your party have spent the night in a cave deep in the forest. You've been on the road for a few days, and the closest
-                    town is still a few more days away. You can hear Uther snoring lazily as you stir. The oaf must've fallen asleep on watch duty
-                    again. That's alright, you're awake now, and the camp seems none-the-worse. You get up and go a small ways from the camp for 
-                    your morning constitution. On your way back to the cave, you see a rather large, fuzzy creature wearing armor heading towards you!
+                You and your party have spent the night in a cave deep in the forest. You've been on the road for a few days, and the closest
+                town is still a few more days away. You can hear Uther snoring lazily as you stir. The oaf must've fallen asleep on watch duty
+                again. That's alright, you're awake now, and the camp seems none-the-worse. You get up and go a small ways from the camp for 
+                your morning constitution. On your way back to the cave, you see a rather large, fuzzy creature wearing armor heading towards you!
             </p>
         </div>
-        <p class="dmVoice">
-            You can see the Gnoll in the distance making its way towards your camp. You have the time to catch up to it, and you think you can knock it out
-            before it alerts anything else nearby. What do you do?
-        </p>
+        <div id="rollBoard">
+            <p class="dmVoice">
+                You can see the Gnoll in the distance making its way towards your camp. You have the time to catch up to it, and you think you can knock it out
+                before it alerts anything else nearby. What do you do?
+            </p>
+        </div>
         <div id=buttonBoard">
-            <button onclick="playGame()" id="playButton">Attack!</button>
+            <button onclick="playGame()" id="playButton">Roll the Dice</button>
             <button onclick="runAlert()" id="testButton">Alert the Party!</button>
         </div>
     </div>
